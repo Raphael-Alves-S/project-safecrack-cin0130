@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/project-safetycrack/simulation/qsim
+vhard_block
+Z1 !s110 1755039343
+!i10b 1
+!s100 nH__@ePd:fS>;MWOlmj5A2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I_XTAnFi:YM<Q_GO8ZAJP11
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1755039341
+Z5 8safecrack_fsm.vo
+Z6 Fsafecrack_fsm.vo
+!i122 14
+L0 5658 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1755039342.000000
+Z9 !s107 safecrack_fsm.vo|
+Z10 !s90 -work|work|safecrack_fsm.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vsafecrack_fsm
+R1
+!i10b 1
+!s100 ^PndBdh4KVOmIfe:]ciV11
+R2
+I<=2U>Mm^h[mhTX@jS44cJ2
+R3
+R0
+R4
+R5
+R6
+!i122 14
+L0 32 5625
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vsafecrack_fsm_vlg_vec_tst
+R1
+!i10b 1
+!s100 R>07gD>[9_jzTH6[jBU;T1
+R2
+IGJ_Zao^jlY?3l;l<9ZWZ[3
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 15
+L0 30 80
+R7
+r1
+!s85 0
+31
+!s108 1755039343.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12

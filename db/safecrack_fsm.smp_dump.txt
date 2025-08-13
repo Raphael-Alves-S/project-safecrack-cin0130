@@ -1,0 +1,10 @@
+
+State Machine - |safecrack_fsm|state
+Name state.LOCKOUT state.ERROR_P state.UNLOCK state.VERIFY state.ENTRY state.READY state.PROG 
+state.PROG 0 0 0 0 0 0 0 
+state.READY 0 0 0 0 0 1 1 
+state.ENTRY 0 0 0 0 1 0 1 
+state.VERIFY 0 0 0 1 0 0 1 
+state.UNLOCK 0 0 1 0 0 0 1 
+state.ERROR_P 0 1 0 0 0 0 1 
+state.LOCKOUT 1 0 0 0 0 0 1 
