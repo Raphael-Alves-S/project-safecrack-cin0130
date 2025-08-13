@@ -1,5 +1,5 @@
 Analysis & Synthesis report for safecrack_fsm
-Tue Aug 12 22:20:59 2025
+Wed Aug 13 20:50:50 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Aug 12 22:20:59 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 13 20:50:50 2025       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; safecrack_fsm                               ;
 ; Top-level Entity Name              ; safecrack_fsm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 146                                         ;
-;     Total combinational functions  ; 140                                         ;
+; Total logic elements               ; 150                                         ;
+;     Total combinational functions  ; 144                                         ;
 ;     Dedicated logic registers      ; 91                                          ;
 ; Total registers                    ; 91                                          ;
 ; Total pins                         ; 33                                          ;
@@ -167,13 +167,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path            ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
-; safecrack_fsm.sv                 ; yes             ; User SystemVerilog HDL File  ; H:/project-safetycrack/safecrack_fsm.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
+; safecrack_fsm.sv                 ; yes             ; User SystemVerilog HDL File  ; H:/project-safecrack-cin0130/safecrack_fsm.sv ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -181,16 +181,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 146       ;
+; Estimated Total logic elements              ; 150       ;
 ;                                             ;           ;
-; Total combinational functions               ; 140       ;
+; Total combinational functions               ; 144       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 52        ;
-;     -- 3 input functions                    ; 23        ;
-;     -- <=2 input functions                  ; 65        ;
+;     -- 4 input functions                    ; 54        ;
+;     -- 3 input functions                    ; 24        ;
+;     -- <=2 input functions                  ; 66        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 89        ;
+;     -- normal mode                          ; 93        ;
 ;     -- arithmetic mode                      ; 51        ;
 ;                                             ;           ;
 ; Total registers                             ; 91        ;
@@ -203,8 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 91        ;
-; Total fan-out                               ; 750       ;
-; Average fan-out                             ; 2.53      ;
+; Total fan-out                               ; 764       ;
+; Average fan-out                             ; 2.54      ;
 +---------------------------------------------+-----------+
 
 
@@ -213,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |safecrack_fsm             ; 140 (140)           ; 91 (91)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |safecrack_fsm      ; safecrack_fsm ; work         ;
+; |safecrack_fsm             ; 144 (144)           ; 91 (91)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |safecrack_fsm      ; safecrack_fsm ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -298,18 +298,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 18                          ;
 ;     ENA SCLR          ; 53                          ;
 ;     plain             ; 20                          ;
-; cycloneiii_lcell_comb ; 142                         ;
+; cycloneiii_lcell_comb ; 146                         ;
 ;     arith             ; 51                          ;
 ;         2 data inputs ; 51                          ;
-;     normal            ; 91                          ;
+;     normal            ; 95                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 52                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 24                          ;
+;         4 data inputs ; 54                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.10                        ;
+; Average LUT depth     ; 4.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -328,43 +328,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Tue Aug 12 22:20:50 2025
+    Info: Processing started: Wed Aug 13 20:50:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off safecrack_fsm -c safecrack_fsm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file safecrack_fsm.sv
-    Info (12023): Found entity 1: safecrack_fsm File: H:/project-safetycrack/safecrack_fsm.sv Line: 2
+    Info (12023): Found entity 1: safecrack_fsm File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 2
 Info (12127): Elaborating entity "safecrack_fsm" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 13
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 15
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 15
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: H:/project-safetycrack/safecrack_fsm.sv Line: 15
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 13
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 15
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 15
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 180 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 147 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Tue Aug 12 22:20:59 2025
-    Info: Elapsed time: 00:00:09
+    Info (21061): Implemented 151 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Wed Aug 13 20:50:50 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -16,7 +16,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[8]",
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
 					"strict" : false
 				},
 				{
@@ -36,11 +40,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[7]",
+					"name" : "LEDG[6]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[8]",
+					"name" : "LEDG[7]",
 					"strict" : false
 				},
 				{
@@ -52,11 +56,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY3_n",
-					"strict" : false
-				},
-				{
-					"name" : "KEY2_n",
+					"name" : "KEY0_n",
 					"strict" : false
 				},
 				{
@@ -64,7 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY0_n",
+					"name" : "KEY2_n",
+					"strict" : false
+				},
+				{
+					"name" : "KEY3_n",
 					"strict" : false
 				}
 			]

@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Aug 12 22:20:59 2025
+Analysis & Synthesis Status : Successful - Wed Aug 13 20:50:50 2025
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : safecrack_fsm
 Top-level Entity Name : safecrack_fsm
 Family : Cyclone IV E
-Total logic elements : 146
-    Total combinational functions : 140
+Total logic elements : 150
+    Total combinational functions : 144
     Dedicated logic registers : 91
 Total registers : 91
 Total pins : 33

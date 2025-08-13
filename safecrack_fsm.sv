@@ -5,7 +5,7 @@ module safecrack_fsm #(
     parameter int CODE_LEN = 4
 )(
     input  logic        clk,
-    input  logic        rst_sw,   // 1: modo programação (mantém PROG); borda ↑ faz reset/limpeza
+    input  logic        rst_sw,
     input  logic        KEY0_n,
     input  logic        KEY1_n,
     input  logic        KEY2_n,
@@ -14,7 +14,6 @@ module safecrack_fsm #(
     output logic [8:0]  LEDG
 );
 
-    // --- Entradas de botões (ativos em alto) ---
     logic key0, key1, key2, key3;
     assign key0 = ~KEY0_n;
     assign key1 = ~KEY1_n;
@@ -82,11 +81,8 @@ module safecrack_fsm #(
         push_digit = {curr[CODE_LEN*2-3:0], dig};
     endfunction
 
-    // ==============================================================
-    //  SEQUENCIAL: reset one-shot + operação
-    // ==============================================================
     always_ff @(posedge clk) begin
-        // Reset/limpeza somente na borda de subida do rst_sw
+        // Reset/limpeza quando o rst_sw estiver up
         if (rst_rise) begin
             state        <= PROG;
             idx          <= '0;
@@ -96,7 +92,7 @@ module safecrack_fsm #(
             err_cnt      <= '0;
             lock_cnt     <= '0;
         end else begin
-            // Próximo estado
+  
             state <= next;
 
             // Captura de senha durante PROG (rst_sw pode permanecer 1 sem zerar tudo)
@@ -149,19 +145,17 @@ module safecrack_fsm #(
         end
     end
 
-    // ==============================================================
-    //  COMBINACIONAL: Próximo estado
-    // ==============================================================
+ 
     always_comb begin
         next = state;
 
-        // Enquanto rst_sw alto, permanece em PROG (sem apagar registros)
+        //rst_sw alto, permanece em PROG
         if (rst_on) begin
             next = PROG;
         end else begin
             unique case (state)
                 PROG: begin
-                    // Só sai para READY quando rst_sw=0 E senha completa digitada
+                    //READY apenas quando rst_sw=0 E senha completa digitada
                     if (idx == CODE_LEN) next = READY;
                     else                 next = PROG;
                 end
@@ -169,7 +163,7 @@ module safecrack_fsm #(
                 ENTRY:  if (idx == CODE_LEN)   next = VERIFY;
                 VERIFY: begin
                     if      (attempt_code == pass_code) next = UNLOCK;
-                    else if (tries == 2)                next = LOCKOUT; // vai virar 3ª falha
+                    else if (tries == 2)                next = LOCKOUT;
                     else                                 next = ERROR_P;
                 end
                 UNLOCK: next = UNLOCK;
@@ -180,9 +174,6 @@ module safecrack_fsm #(
         end
     end
 
-    // ==============================================================
-    //  COMBINACIONAL: LEDs
-    // ==============================================================
     localparam int ERR_CNT_MSB = $bits(err_cnt) - 1;
 
     always_comb begin
@@ -200,14 +191,16 @@ module safecrack_fsm #(
             endcase
         end
 
-        // Estado
-        if (state == UNLOCK)  LEDG[8] = 1'b1;
+        // Estado relacionaods aos LEDS
+        if (state == UNLOCK)  LEDG[6] = 1'b1;
         if (state == ERROR_P) LEDR[0] = err_cnt[ERR_CNT_MSB];
-        if (state == LOCKOUT) LEDR[8] = 1'b1;
+        if (state == LOCKOUT) LEDR[5] = 1'b1;
         if (state == PROG)    LEDG[7] = 1'b1;
 
-        // Tentativas (2 bits → 3 LEDs)
-        LEDR[3:1] = {1'b0, tries};
+		  if (tries == 1)  LEDR[1] = 1'b1;
+		  if (tries == 2)  LEDR[2] = 1'b1;
+		  if (tries == 3)  LEDR[3] = 1'b1;
+			 
     end
 
 
