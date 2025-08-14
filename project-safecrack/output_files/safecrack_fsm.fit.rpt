@@ -1,5 +1,5 @@
 Fitter report for safecrack_fsm
-Wed Aug 13 20:51:03 2025
+Thu Aug 14 19:22:16 2025
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 13 20:51:03 2025       ;
+; Fitter Status                      ; Successful - Thu Aug 14 19:22:16 2025       ;
 ; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                      ; safecrack_fsm                               ;
 ; Top-level Entity Name              ; safecrack_fsm                               ;
@@ -157,8 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processors 3-16        ;   0.3%      ;
+;     Processors 2-16        ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -200,7 +199,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in H:/project-safecrack-cin0130/output_files/safecrack_fsm.pin.
+The pin-out file can be found in D:/Users/lrsn/Documents/project-safecrack-cin0130/project-safecrack/output_files/safecrack_fsm.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -1647,7 +1646,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: H:/project-safecrack-cin0130/safecrack_fsm.sv Line: 7
+Info (176353): Automatically promoted node clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: D:/Users/lrsn/Documents/project-safecrack-cin0130/project-safecrack/safecrack_fsm.sv Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1665,23 +1664,23 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.44 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file H:/project-safecrack-cin0130/output_files/safecrack_fsm.fit.smsg
+Info (144001): Generated suppressed messages file D:/Users/lrsn/Documents/project-safecrack-cin0130/project-safecrack/output_files/safecrack_fsm.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 6750 megabytes
-    Info: Processing ended: Wed Aug 13 20:51:04 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Processing ended: Thu Aug 14 19:22:16 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in H:/project-safecrack-cin0130/output_files/safecrack_fsm.fit.smsg.
+The suppressed messages can be found in D:/Users/lrsn/Documents/project-safecrack-cin0130/project-safecrack/output_files/safecrack_fsm.fit.smsg.
 
 
