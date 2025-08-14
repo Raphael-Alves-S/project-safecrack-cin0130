@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("H:/project-safecrack-cin0130/output_files/") File("safecrack_fsm.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("D:/Users/lrsn/Documents/project-safecrack-cin0130/project-safecrack/output_files/") File("safecrack_fsm.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
